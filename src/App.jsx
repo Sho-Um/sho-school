@@ -8,6 +8,7 @@ function App() {
         <Hero />
         <About />
         <WhatIDo />
+        <Works />
         <CurrentProjects />
         <Values />
         <Contact />
@@ -25,6 +26,7 @@ function Header() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#works">Works</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -137,6 +139,53 @@ function WhatIDo() {
   )
 }
 
+const works = [
+  {
+    tag: 'Web制作',
+    title: '鉄板旅人',
+    desc: '広島牡蠣とお好み焼きを楽しめる鉄板料理店のサイト。メニューやお店の世界観を、清潔感のあるデザインで伝えています。',
+    url: 'https://teppan-tabito.jp/',
+    domain: 'teppan-tabito.jp',
+  },
+  {
+    tag: 'Web制作',
+    title: 'ASPIRE',
+    desc: '水色の光に包まれる、透明感のあるエンターテインメント空間のブランドサイト。世界観を崩さないビジュアル設計を意識しました。',
+    url: 'https://aspire-official.vercel.app/',
+    domain: 'aspire-official.vercel.app',
+  },
+]
+
+function Works() {
+  return (
+    <section id="works" className="works section">
+      <div className="container">
+        <div className="section-label">Works</div>
+        <h2 className="section-title">制作実績</h2>
+        <div className="work-list">
+          {works.map((w) => (
+            <a
+              key={w.title}
+              href={w.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-item"
+            >
+              <span className="project-tag">{w.tag}</span>
+              <h3 className="work-name">{w.title}</h3>
+              <p className="work-desc">{w.desc}</p>
+              <span className="work-link">
+                {w.domain}
+                <span className="work-arrow" aria-hidden="true">↗</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const projects = [
   {
     tag: 'Web制作',
@@ -162,7 +211,7 @@ const projects = [
 
 function CurrentProjects() {
   return (
-    <section id="projects" className="projects section">
+    <section id="projects" className="projects section section-alt">
       <div className="container">
         <div className="section-label">Current Projects</div>
         <h2 className="section-title">最近の取り組み</h2>
@@ -200,7 +249,7 @@ const values = [
 
 function Values() {
   return (
-    <section id="values" className="values section section-alt">
+    <section id="values" className="values section">
       <div className="container">
         <div className="section-label">Values</div>
         <h2 className="section-title">大切にしていること</h2>
@@ -220,20 +269,35 @@ function Values() {
   )
 }
 
+const contactTopics = [
+  { label: 'Web制作の依頼' },
+  { label: 'マーケティングの相談' },
+  { label: '学習支援・家庭教師' },
+  { label: 'AI活用のサポート' },
+  { label: 'まずは話だけ聞きたい' },
+]
+
 function Contact() {
   return (
-    <section id="contact" className="contact section">
+    <section id="contact" className="contact section section-alt">
       <div className="container">
         <div className="section-label">Contact</div>
         <h2 className="section-title">お問い合わせ</h2>
         <p className="contact-desc">
-          ご依頼・ご相談・雑談でも、お気軽にどうぞ。<br />
-          まずはメールでご連絡いただければ、24時間以内にお返しします。
+          正式な依頼でなくても、「こういうことで困っている」という段階でも大丈夫です。<br />
+          メールでご連絡いただければ、24時間以内にお返しします。
         </p>
-        <a href="mailto:hello@example.com" className="btn btn-primary contact-btn">
+
+        <div className="contact-topics">
+          {contactTopics.map((t) => (
+            <span key={t.label} className="contact-topic">{t.label}</span>
+          ))}
+        </div>
+
+        <a href="mailto:zillion.of.zest.stay.gold.sho1@gmail.com" className="btn btn-primary contact-btn">
           メールで相談する
         </a>
-        <p className="contact-mail">hello@example.com</p>
+        <p className="contact-mail">zillion.of.zest.stay.gold.sho1@gmail.com</p>
       </div>
     </section>
   )
