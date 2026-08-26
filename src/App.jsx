@@ -6,9 +6,9 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Works />
         <About />
         <WhatIDo />
-        <Works />
         <CurrentProjects />
         <Values />
         <Contact />
@@ -24,9 +24,9 @@ function Header() {
       <div className="header-inner container">
         <a href="#hero" className="logo">Sho School</a>
         <nav className="nav">
+          <a href="#works">Works</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#works">Works</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -153,6 +153,13 @@ const works = [
     desc: '水色の光に包まれる、透明感のあるエンターテインメント空間のブランドサイト。世界観を崩さないビジュアル設計を意識しました。',
     url: 'https://aspire-official.vercel.app/',
     domain: 'aspire-official.vercel.app',
+  },
+  {
+    tag: 'Web制作',
+    title: 'HiDOL FACTORY',
+    desc: '広島発の次世代アイドル育成プロジェクトの公式サイト。メンバー紹介やライブ告知など、ファンとの接点を作る導線を設計しました。',
+    url: 'https://hidol.jp/',
+    domain: 'hidol.jp',
   },
 ]
 
