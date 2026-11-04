@@ -80,8 +80,8 @@ export const works = [
         'HiDOL FACTORY 初ワンマンライブの会場としても使用されている',
       ],
     },
-    url: 'https://aspire-official.vercel.app/',
-    domain: 'aspire-official.vercel.app',
+    url: 'https://aspire21.jp/',
+    domain: 'aspire21.jp',
     image: {
       src: aspireImg,
       alt: 'ASPIRE 公式サイトのトップページ（スマートフォン表示）',
