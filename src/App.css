@@ -1006,7 +1006,7 @@
 .loader-skip {
   position: absolute;
   right: 20px;
-  bottom: 24px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 88px);
   padding: 8px 4px;
   border: 0;
   border-bottom: 1px solid var(--border-dark);
