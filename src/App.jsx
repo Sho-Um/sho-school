@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Loader from './components/Loader'
 import Home from './pages/Home'
 import WorkDetail from './pages/WorkDetail'
 import NotFound from './pages/NotFound'
@@ -22,6 +23,7 @@ function ScrollToTopOnNavigate() {
 function App() {
   return (
     <BrowserRouter>
+      <Loader />
       <div className="site">
         <a href="#main-content" className="skip-link">
           本文へ移動

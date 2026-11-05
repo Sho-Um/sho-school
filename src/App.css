@@ -977,3 +977,49 @@
   max-width: 480px;
   margin: 0 auto 40px;
 }
+
+/* ロード演出 */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfdfd;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.loader-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-video {
+  width: min(100vw, 100vh, 720px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+}
+
+.loader-skip {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+  padding: 8px 4px;
+  border: 0;
+  border-bottom: 1px solid var(--border-dark);
+  background: none;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.loader-skip:hover,
+.loader-skip:focus-visible {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
